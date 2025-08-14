@@ -4,11 +4,17 @@
   <title>Bitcoin México Landing</title>
   <link>https://brunorepossi.github.io/bitcoin-mexico-landing/</link>
   <description>Oferta exclusiva para ganar Bitcoin gratis en México y otros países</description>
+  <language>es</language>
+
   <item>
-    <title>🔥 Gana $11 USD en Bitcoin Gratis</title>
+    <title>🔥 Gana $11 USD en Bitcoin Gratis (Oferta Limitada)</title>
     <link>https://brunorepossi.github.io/bitcoin-mexico-landing/</link>
-    <description>Recibe hasta $11 USD en Bitcoin gratis al registrarte desde tu Android. Oferta limitada para México, Croacia, Israel, Malasia y Arabia Saudita.</description>
-    <pubDate>Wed, 13 Aug 2025 10:00:00 +0000</pubDate>
+    <description><![CDATA[
+    Recibe hasta $11 USD en Bitcoin gratis al registrarte desde tu Android. Oferta limitada para México, Croacia, Israel, Malasia y Arabia Saudita.
+    ]]></description>
+    <pubDate>Wed, 13 Aug 2025 14:00:00 +0000</pubDate>
+    <guid>https://brunorepossi.github.io/bitcoin-mexico-landing/?p=1</guid>
   </item>
+
 </channel>
 </rss>
