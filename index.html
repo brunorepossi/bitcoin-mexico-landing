@@ -2,8 +2,8 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Oferta Exclusiva Bitcoin</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
   body {
     font-family: Arial, sans-serif;
@@ -21,7 +21,9 @@
     border-radius: 10px 10px 0 0;
     color: #fff;
   }
-  a.btn {
+  main { padding: 20px; text-align: center; }
+  ol { text-align: left; display: inline-block; }
+  a.boton {
     display: block;
     width: 100%;
     max-width: 350px;
@@ -37,46 +39,37 @@
     box-shadow: 0 6px 12px rgba(0,0,0,0.2);
     transition: all 0.3s ease;
   }
-  a.btn:hover {
+  a.boton:hover {
     background: linear-gradient(90deg, #ffb300, #ff9800);
     box-shadow: 0 8px 16px rgba(0,0,0,0.3);
   }
-  #scarcityMessage {
-    font-size: 20px;
-    font-weight: bold;
-    margin: 15px 0;
-    text-align: center;
-  }
+  footer { text-align:center; padding:15px; font-size:14px; color:#555; }
   /* Popup */
   #popup {
     display: none;
     position: fixed;
-    top: 0; left: 0;
+    top:0; left:0;
     width: 100%; height: 100%;
-    background: rgba(0,0,0,0.7);
-    z-index: 1000;
-    justify-content: center;
+    background: rgba(0,0,0,0.6);
+    z-index: 9999;
     align-items: center;
+    justify-content: center;
   }
-  #popupContent {
-    background: white;
+  #popup-content {
+    background: #fff;
     padding: 20px;
     border-radius: 10px;
-    text-align: center;
     max-width: 400px;
-    width: 90%;
+    text-align: center;
   }
-  #popupContent h2 {
-    margin-top: 0;
-  }
-  .closeBtn {
-    background: red;
-    color: white;
+  #popup button {
+    background: #ff9800;
+    color: #fff;
+    padding: 10px 20px;
     border: none;
-    padding: 10px 15px;
-    cursor: pointer;
     border-radius: 5px;
-    margin-top: 15px;
+    font-size: 18px;
+    cursor: pointer;
   }
 </style>
 </head>
@@ -86,25 +79,23 @@
   <h1>💰 Oferta Exclusiva: Gana Bitcoin Gratis</h1>
 </header>
 
-<main style="text-align:center;">
+<main>
   <h2>Disponible solo por tiempo limitado</h2>
   <p>Si vives en <strong>México, Croacia, Israel, Malasia o Arabia Saudita</strong> y usas Android, ¡esta es tu oportunidad de comenzar a ganar Bitcoin!</p>
 
-  <div style="font-size: 24px; font-weight: bold; color: red; margin: 20px 0;" id="countdown">
+  <div id="contador" style="font-size: 24px; font-weight: bold; color: red; margin: 20px 0;">
     ⏰ Oferta expira en: 05:00 minutos
   </div>
 
-  <div id="scarcityMessage">⚡ Últimos 10 bonos disponibles ⚡</div>
-
   <p>El proceso es muy simple:</p>
-  <ol style="text-align: left; display: inline-block;">
+  <ol>
     <li>Haz clic en el botón de abajo.</li>
     <li>Regístrate gratis en la plataforma.</li>
     <li>Realiza tu primera transacción de prueba.</li>
     <li>Recibe tu bono en Bitcoin.</li>
   </ol>
 
-  <a href="https://directcpi.com/view.php?id=5541622&pub=876451" class="btn">✅ Registrarme y Reclamar Bono</a>
+  <a href="https://directcpi.com/view.php?id=5541622&pub=876451" target="_blank" class="boton">✅ Registrarme y Reclamar Bono</a>
 
   <h3>¿Por qué funciona?</h3>
   <p>Las plataformas de criptomonedas ofrecen bonos para nuevos usuarios. La oferta paga directamente en Bitcoin, que podrás mantener, vender o retirar.</p>
@@ -114,73 +105,70 @@
   <p><strong>¿Cuánto puedo ganar?</strong> Bono inicial fijo, luego podrás aumentar ganancias usando la plataforma.</p>
   <p><strong>¿Cuánto tarda en acreditarse?</strong> Generalmente entre 24 y 72 horas tras registrarte y hacer la transacción de prueba.</p>
 
-  <a href="https://directcpi.com/view.php?id=5541622&pub=876451" class="btn">🔥 Quiero mi Bono en Bitcoin</a>
+  <a href="https://directcpi.com/view.php?id=5541622&pub=876451" target="_blank" class="boton">🔥 Quiero mi Bono en Bitcoin</a>
 </main>
 
-<footer style="text-align:center; padding:15px; font-size:14px; color:#555;">
+<footer>
   © 2025 Bitcoin México. No brindamos asesoría financiera. Oferta sujeta a disponibilidad por país.
 </footer>
 
 <!-- Popup -->
 <div id="popup">
-  <div id="popupContent">
-    <h2>⚡ ¡Última Oportunidad!</h2>
-    <p>Solo quedan <span id="popupStock">10</span> bonos disponibles. ¡Reclama el tuyo ahora!</p>
-    <a href="https://directcpi.com/view.php?id=5541622&pub=876451" class="btn">✅ Reclamar Bono</a>
-    <button class="closeBtn" onclick="closePopup()">Cerrar</button>
+  <div id="popup-content">
+    <h2>¡No te vayas sin tu bono! 🎁</h2>
+    <p>Regístrate ahora y recibe Bitcoin gratis.</p>
+    <a href="https://directcpi.com/view.php?id=5541622&pub=876451" target="_blank" class="boton">Reclamar Bono</a>
+    <br><br>
+    <button onclick="document.getElementById('popup').style.display='none'">Cerrar</button>
   </div>
 </div>
 
 <script>
   // Contador regresivo
-  let countdownEl = document.getElementById('countdown');
-  let time = 5 * 60; // 5 minutos
+  let segundos = 300;
   setInterval(() => {
-    let minutes = Math.floor(time / 60);
-    let seconds = time % 60;
-    seconds = seconds < 10 ? '0' + seconds : seconds;
-    countdownEl.textContent = `⏰ Oferta expira en: ${minutes}:${seconds} minutos`;
-    if (time > 0) time--;
+    segundos--;
+    if (segundos < 0) segundos = 0;
+    let min = String(Math.floor(segundos / 60)).padStart(2, '0');
+    let sec = String(segundos % 60).padStart(2, '0');
+    document.getElementById('contador').innerHTML = `⏰ Oferta expira en: ${min}:${sec} minutos`;
   }, 1000);
-
-  // Stock dinámico
-  const scarcityEl = document.getElementById('scarcityMessage');
-  const popupStockEl = document.getElementById('popupStock');
-  let colors = ['red','darkred','orange'];
-  let i = 0;
-  setInterval(() => { 
-    scarcityEl.style.color = colors[i % colors.length]; 
-    i++; 
-  }, 500);
-
-  let stock = 10;
-  function reduceStock() {
-    if (stock > 1) {
-      stock--;
-      scarcityEl.textContent = `⚡ Últimos ${stock} bonos disponibles ⚡`;
-      popupStockEl.textContent = stock;
-    }
-  }
-  setInterval(reduceStock, 8000);
 
   // Popup automático
   setTimeout(() => {
-    openPopup();
-  }, 15000); // 15 segundos
+    document.getElementById('popup').style.display = 'flex';
+  }, 8000);
 
-  // Exit-intent popup
-  document.addEventListener('mouseout', function(e) {
+  // Popup exit-intent
+  document.addEventListener('mouseout', e => {
     if (!e.toElement && !e.relatedTarget && e.clientY < 10) {
-      openPopup();
+      document.getElementById('popup').style.display = 'flex';
     }
   });
 
-  function openPopup() {
-    document.getElementById('popup').style.display = 'flex';
+  // Filtro por Android y países
+  async function checkAccess() {
+    let ua = navigator.userAgent.toLowerCase();
+    let isAndroid = ua.includes("android");
+    let allowedCountries = ["Croatia", "Israel", "Mexico", "Malaysia", "Saudi Arabia"];
+    let country = "";
+    try {
+      let res = await fetch("https://ipapi.co/json/");
+      let data = await res.json();
+      country = data.country_name;
+    } catch (e) {
+      console.error("Error obteniendo ubicación:", e);
+    }
+    if (!isAndroid || !allowedCountries.includes(country)) {
+      document.body.innerHTML = `
+        <div style="font-family: Arial; text-align:center; padding:50px;">
+          <h2>❌ Oferta no disponible</h2>
+          <p>Esta promoción es solo para usuarios Android en: Croatia, Israel, Mexico, Malaysia y Saudi Arabia.</p>
+        </div>
+      `;
+    }
   }
-  function closePopup() {
-    document.getElementById('popup').style.display = 'none';
-  }
+  checkAccess();
 </script>
 
 </body>
