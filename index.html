@@ -2,108 +2,30 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Oferta Exclusiva Bitcoin</title>
+<title>Ofertas Exclusivas: Bitcoin y Gift Cards</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-  body {
-    font-family: Arial, sans-serif;
-    max-width: 800px;
-    margin: auto;
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  }
-  header {
-    text-align: center;
-    background: #ffb300;
-    padding: 20px;
-    border-radius: 10px 10px 0 0;
-    color: #fff;
-  }
+  body { font-family: Arial, sans-serif; max-width: 800px; margin: auto; background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+  header { text-align: center; background: #ffb300; padding: 20px; border-radius: 10px 10px 0 0; color: #fff; }
   main { padding: 20px; text-align: center; }
   ol { text-align: left; display: inline-block; }
-  a.boton {
-    display: block;
-    width: 100%;
-    max-width: 350px;
-    margin: 20px auto;
-    background: linear-gradient(90deg, #ff9800, #ffb300);
-    color: #fff;
-    padding: 18px 0;
-    font-size: 20px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    text-align: center;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-    transition: all 0.3s ease;
-  }
-  a.boton:hover {
-    background: linear-gradient(90deg, #ffb300, #ff9800);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
-  }
+  a.boton { display: block; width: 100%; max-width: 350px; margin: 20px auto; background: linear-gradient(90deg, #ff9800, #ffb300); color: #fff; padding: 18px 0; font-size: 20px; border-radius: 8px; text-decoration: none; font-weight: bold; text-align: center; box-shadow: 0 6px 12px rgba(0,0,0,0.2); transition: all 0.3s ease; }
+  a.boton:hover { background: linear-gradient(90deg, #ffb300, #ff9800); box-shadow: 0 8px 16px rgba(0,0,0,0.3); }
   footer { text-align:center; padding:15px; font-size:14px; color:#555; }
-  #popup {
-    display: none;
-    position: fixed;
-    top:0; left:0;
-    width: 100%; height: 100%;
-    background: rgba(0,0,0,0.6);
-    z-index: 9999;
-    align-items: center;
-    justify-content: center;
-  }
-  #popup-content {
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 400px;
-    text-align: center;
-  }
-  #popup button {
-    background: #ff9800;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 18px;
-    cursor: pointer;
-  }
+  #popup { display: none; position: fixed; top:0; left:0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 9999; align-items: center; justify-content: center; }
+  #popup-content { background: #fff; padding: 20px; border-radius: 10px; max-width: 400px; text-align: center; }
+  #popup button { background: #ff9800; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; font-size: 18px; cursor: pointer; }
 </style>
-
-<!-- OneSignal Web Push -->
-<script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
-<script>
-  window.OneSignal = window.OneSignal || [];
-  OneSignal.push(function() {
-    OneSignal.init({
-      appId: "af53f018-f45d-4a9f-b820-914f936cae01",
-      notifyButton: { enable: true },
-      welcomeNotification: {
-        "title": "Bitcoin Mexico Landing",
-        "message": "¡Gracias por suscribirte! Reclama tu bono en Bitcoin ahora.",
-        "url": "https://brunorepossi.github.io/bitcoin-mexico-landing/"
-      }
-    });
-
-    // Auto Prompt después de 10s
-    setTimeout(() => {
-      OneSignal.showSlidedownPrompt();
-    }, 10000);
-  });
-</script>
-
 </head>
 <body>
 
 <header>
-  <h1>💰 Oferta Exclusiva: Gana Bitcoin Gratis</h1>
+  <h1>💰 Ofertas Exclusivas: Bitcoin y Gift Cards</h1>
 </header>
 
 <main>
   <h2>Disponible solo por tiempo limitado</h2>
-  <p>Si vives en <strong>México, Croacia, Israel, Malasia o Arabia Saudita</strong> y usas Android, ¡esta es tu oportunidad de comenzar a ganar Bitcoin!</p>
+  <p>Si cumples los requisitos, ¡elige tu oferta y comienza a ganar!</p>
 
   <div id="contador" style="font-size: 24px; font-weight: bold; color: red; margin: 20px 0;">
     ⏰ Oferta expira en: 05:00 minutos
@@ -113,33 +35,28 @@
   <ol>
     <li>Haz clic en el botón de abajo.</li>
     <li>Regístrate gratis en la plataforma.</li>
-    <li>Realiza tu primera transacción de prueba.</li>
-    <li>Recibe tu bono en Bitcoin.</li>
+    <li>Realiza la acción requerida (registro, depósito, etc.).</li>
+    <li>Recibe tu bono en Bitcoin o Gift Card.</li>
   </ol>
 
-  <a href="https://directcpi.com/view.php?id=5541622&pub=876451" target="_blank" class="boton">✅ Registrarme y Reclamar Bono</a>
+  <!-- Botones de oferta -->
+  <a href="https://mobtrk.link/view.php?id=5541776&pub=876451" target="_blank" class="boton" id="crypto-btn" style="display:none;">✅ Crypto Bitcoin</a>
 
-  <h3>¿Por qué funciona?</h3>
-  <p>Las plataformas de criptomonedas ofrecen bonos para nuevos usuarios. La oferta paga directamente en Bitcoin, que podrás mantener, vender o retirar.</p>
-
-  <h3>Preguntas frecuentes</h3>
-  <p><strong>¿Es gratis?</strong> Sí, solo necesitas un teléfono Android y conexión a Internet.</p>
-  <p><strong>¿Cuánto puedo ganar?</strong> Bono inicial fijo, luego podrás aumentar ganancias usando la plataforma.</p>
-  <p><strong>¿Cuánto tarda en acreditarse?</strong> Generalmente entre 24 y 72 horas tras registrarte y hacer la transacción de prueba.</p>
-
-  <a href="https://directcpi.com/view.php?id=5541622&pub=876451" target="_blank" class="boton">🔥 Quiero mi Bono en Bitcoin</a>
+  <a href="https://directcpi.com/view.php?id=5539883&pub=876451" target="_blank" class="boton gift-btn" data-country="US" style="display:none;">🎁 Gift Card US $4.68</a>
+  <a href="https://lnksforyou.com/view.php?id=5541497&pub=876451" target="_blank" class="boton gift-btn" data-country="AU" style="display:none;">🎁 Gift Card AU $5.46</a>
+  <a href="https://directcpi.com/view.php?id=5539883&pub=876451" target="_blank" class="boton gift-btn" data-country="AU" style="display:none;">🎁 Gift Card AU Effortless $4.68</a>
 </main>
 
 <footer>
-  © 2025 Bitcoin México. No brindamos asesoría financiera. Oferta sujeta a disponibilidad por país.
+  © 2025 Ofertas Exclusivas. No brindamos asesoría financiera. Oferta sujeta a disponibilidad.
 </footer>
 
 <!-- Popup -->
 <div id="popup">
   <div id="popup-content">
     <h2>¡No te vayas sin tu bono! 🎁</h2>
-    <p>Regístrate ahora y recibe Bitcoin gratis.</p>
-    <a href="https://directcpi.com/view.php?id=5541622&pub=876451" target="_blank" class="boton">Reclamar Bono</a>
+    <p>Elige tu oferta y reclama tu recompensa ahora.</p>
+    <a href="#" target="_blank" class="boton" id="popup-link">Reclamar Bono</a>
     <br><br>
     <button onclick="document.getElementById('popup').style.display='none'">Cerrar</button>
   </div>
@@ -156,41 +73,61 @@
     document.getElementById('contador').innerHTML = `⏰ Oferta expira en: ${min}:${sec} minutos`;
   }, 1000);
 
-  // Popup automático
-  setTimeout(() => {
-    document.getElementById('popup').style.display = 'flex';
-  }, 8000);
-
-  // Popup exit-intent
-  document.addEventListener('mouseout', e => {
-    if (!e.toElement && !e.relatedTarget && e.clientY < 10) {
-      document.getElementById('popup').style.display = 'flex';
-    }
-  });
-
-  // Filtro por Android y países
+  // Filtro por país y Android + mostrar botones correctos
   async function checkAccess() {
     let ua = navigator.userAgent.toLowerCase();
     let isAndroid = ua.includes("android");
-    let allowedCountries = ["Croatia", "Israel", "Mexico", "Malaysia", "Saudi Arabia"];
-    let country = "";
+    let cryptoCountries = ["Croatia", "Israel", "Mexico", "Malaysia", "Saudi Arabia"];
+    let giftButtons = document.querySelectorAll(".gift-btn");
+    let cryptoBtn = document.getElementById("crypto-btn");
+    let popupLink = document.getElementById("popup-link");
+    let countryCode = "";
+    let countryName = "";
+
     try {
       let res = await fetch("https://ipapi.co/json/");
       let data = await res.json();
-      country = data.country_name;
-    } catch (e) {
-      console.error("Error obteniendo ubicación:", e);
+      countryCode = data.country_code; // ISO 2-letter code
+      countryName = data.country_name;
+    } catch(e) { console.error("Error obteniendo ubicación:", e); }
+
+    // Mostrar crypto si califica
+    if (isAndroid && cryptoCountries.includes(countryName)) {
+      cryptoBtn.style.display = "block";
+      popupLink.href = cryptoBtn.href;
     }
-    if (!isAndroid || !allowedCountries.includes(country)) {
-      document.body.innerHTML = `
-        <div style="font-family: Arial; text-align:center; padding:50px;">
-          <h2>❌ Oferta no disponible</h2>
-          <p>Esta promoción es solo para usuarios Android en: Croatia, Israel, Mexico, Malaysia y Saudi Arabia.</p>
-        </div>
-      `;
+
+    // Mostrar Gift Cards solo para el país correspondiente
+    giftButtons.forEach(btn => {
+      if (btn.dataset.country === countryCode) {
+        btn.style.display = "block";
+        if(!popupLink.href || popupLink.href === "#") popupLink.href = btn.href;
+      }
+    });
+
+    // Si nadie califica, mostrar mensaje
+    if(cryptoBtn.style.display === "none" && ![...giftButtons].some(b=>b.style.display==="block")) {
+      document.body.innerHTML = `<div style="font-family: Arial; text-align:center; padding:50px;">
+        <h2>❌ Oferta no disponible</h2>
+        <p>No hay ofertas para tu país o dispositivo.</p>
+      </div>`;
     }
   }
   checkAccess();
+
+  // Popup automático solo si hay botón visible
+  setTimeout(() => {
+    let popupLink = document.getElementById("popup-link");
+    if(popupLink.href !== "#") document.getElementById('popup').style.display='flex';
+  }, 8000);
+
+  // Popup exit-intent solo si hay botón visible
+  document.addEventListener('mouseout', e => {
+    let popupLink = document.getElementById("popup-link");
+    if(popupLink.href !== "#" && !e.toElement && !e.relatedTarget && e.clientY < 10) {
+      document.getElementById('popup').style.display='flex';
+    }
+  });
 </script>
 
 </body>
