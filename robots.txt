@@ -1,5 +1,4 @@
 User-agent: *
-Disallow: /private/
 Allow: /
 
 Sitemap: https://brunorepossi.github.io/bitcoin-mexico-landing/sitemap.xml
